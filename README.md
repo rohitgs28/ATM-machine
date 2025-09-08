@@ -95,7 +95,7 @@ uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
 
 ### Endpoints
 - **POST** `/auth/pin`  
-  Body: `{"pin": "1234", "cardToken": "TOK_..."}` → sets HttpOnly session cookie  
+  Body: `{"pin": "1234", "cardToken": "TOK_..."}` -> sets HttpOnly session cookie  
 - **POST** `/auth/logout`  
 - **GET** `/account/balance`  
 - **POST** `/account/deposit`  
