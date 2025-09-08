@@ -58,12 +58,7 @@ CREATE DATABASE db_atm OWNER atm;
 ---
 
 ## Backend Setup (FastAPI)
-
-Edit `.env` and set:
-```bash
-DATABASE_URL=postgresql://atm:atm@localhost:5432/db_atm
-```
-or Make sure the shared.env file is there in the backedn folder.
+In the backend folder make sure the shared .env file is present.
 
 Create a virtual environment and install dependencies:
 
