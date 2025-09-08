@@ -106,9 +106,8 @@ uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
 
 ## Frontend Setup (Next.js)
 
+Make sure the .env.local file is present in the folder.
 ```bash
-cd frontend
-cp .env.example .env
 npm install
 npm run dev
 ```
