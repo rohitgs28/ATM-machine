@@ -1,0 +1,17 @@
+
+!.gitignore
+# dotenv
+.env
+.env.*
+*.env
+*.env.*
+
+# keep example templates tracked
+!.env.example
+!.env.local.example
+
+# track .gitignore files themselves
+!.gitignore
+
+# macOS junk
+.DS_Store
