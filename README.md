@@ -73,21 +73,21 @@ Create a virtual environment and install dependencies:
 
 **macOS or Linux**
 ```bash
-python -m venv .venv
+python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
 **Windows (PowerShell)**
 ```powershell
-python -m venv .venv
+python3 -m venv .venv
 .\.venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
 Create tables, seed demo data, and run the API:
 ```bash
-python -m app.db.seeds
+python3 -m app.db.seeds
 uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
 ```
 
