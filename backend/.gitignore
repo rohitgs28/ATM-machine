@@ -1,13 +1,10 @@
-# OS
+# OS/IDE
 .DS_Store
-Thumbs.db
-
-# IDE/editor
 .idea/
 .vscode/
 *.code-workspace
 
-# Environment
+# Env
 .env
 .env.*
 *.env
@@ -17,6 +14,8 @@ Thumbs.db
 __pycache__/
 *.py[cod]
 *$py.class
+.venv/
+venv/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
@@ -25,16 +24,7 @@ htmlcov/
 dist/
 build/
 site/
-venv/
-.venv/
 
-# Logs & misc
+# Logs
 *.log
 logs/
-coverage/
-
-# Local env overrides
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local

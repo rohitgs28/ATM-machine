@@ -1,0 +1,24 @@
+# OS/IDE
+.DS_Store
+.idea/
+.vscode/
+*.code-workspace
+
+# Env
+.env
+.env.*
+*.env
+*.env.*
+
+# Node/Next
+node_modules/
+.next/
+out/
+.vercel/
+.eslintcache
+*.tsbuildinfo
+
+# Logs/Coverage
+*.log
+logs/
+coverage/
