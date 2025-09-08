@@ -154,7 +154,7 @@ npm test
 
 ---
 
-## Use Google chrome for best experience.
+## Use **Google Chrome**, **Mozilla Firefox**, or **Safari** for best experience.
 
 ## Note on PCI
 
