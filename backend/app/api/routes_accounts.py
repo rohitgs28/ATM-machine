@@ -20,7 +20,7 @@ def get_balance(
         db (Session): Database session (injected via get_session_db).
 
     Returns:
-        dict: JSON object with formatted 'balance' (e.g. {"balance": "100.00"}).
+        dict: JSON object with formatted 'balance'.
     """
     service = AccountService()
     try:

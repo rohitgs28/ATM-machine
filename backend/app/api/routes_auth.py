@@ -66,7 +66,7 @@ def logout(
         db (Session): Database session dependency.
 
     Returns:
-        dict[str, bool]: Simple status object, e.g. {"ok": True}.
+        dict[str, bool]: Simple status object.
     """
     service = AuthService()
     service.logout(db, sess)

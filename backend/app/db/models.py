@@ -67,11 +67,9 @@ class Customer(Base):
 
 
 class Card(Base):
-    # Persist cards in the `tbl_cards` table. A card belongs to a customer.
     __tablename__ = "tbl_cards"
 
     id: Mapped[int] = mapped_column(BigInteger, primary_key=True)
-    # Reference the owning customer via the `tbl_customers` table.
     customer_id: Mapped[int] = mapped_column(
         ForeignKey("tbl_customers.id", ondelete="CASCADE"), index=True
     )
@@ -103,7 +101,6 @@ class Card(Base):
 
 
 class Account(Base):
-    # Accounts are stored in `tbl_accounts`. 
     __tablename__ = "tbl_accounts"
 
     id: Mapped[int] = mapped_column(BigInteger, primary_key=True)
@@ -132,11 +129,9 @@ class Account(Base):
 
 
 class Transaction(Base):
-    # Transaction records live in `tbl_transactions`. Each transaction is associated with an account.
     __tablename__ = "tbl_transactions"
 
     id: Mapped[int] = mapped_column(BigInteger, primary_key=True)
-    # Foreign key to the owning account in `tbl_accounts`.
     account_id: Mapped[int] = mapped_column(
         ForeignKey("tbl_accounts.id", ondelete="CASCADE"), index=True
     )

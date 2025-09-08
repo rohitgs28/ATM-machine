@@ -28,7 +28,6 @@ def _get_account_for_session(db: Session, sess: orm.Session) -> orm.Account:
     Returns:
         orm.Account: The account associated with the session's card.
     """
-    # Resolve the logged-in session to the user's Account.
     card = db.get(orm.Card, sess.card_id)
     if not card:
         raise HTTPException(
