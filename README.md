@@ -154,6 +154,8 @@ npm test
 
 ---
 
+## Use Google chrome for best experience.
+
 ## Note on PCI
 
 This app simulates a PCI-friendly flow by requiring **token + PIN**.  
