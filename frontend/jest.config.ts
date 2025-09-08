@@ -5,13 +5,11 @@ const config: Config = {
   testEnvironment: 'jsdom',
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
 
-  // NEW: use transform instead of globals
   transform: {
     '^.+\\.(ts|tsx)$': [
       'ts-jest',
       {
         tsconfig: 'tsconfig.jest.json',
-        // optional but common for speed:
         isolatedModules: true,
       },
     ],

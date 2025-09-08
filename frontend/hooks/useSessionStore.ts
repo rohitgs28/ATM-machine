@@ -4,7 +4,7 @@ import { persist, createJSONStorage } from 'zustand/middleware';
 /**
  * Zustand-based session store used by the ATM frontend.  This hook tracks
  * authentication state and a few pieces of card/customer metadata across
- * pages. 
+ * pages.
  */
 interface SessionState {
   isAuthenticated: boolean;
@@ -28,7 +28,7 @@ interface SessionStore {
 }
 
 export const useSessionStore = create<SessionStore>()(
-  // Persist the entire session in localStorage. 
+  // Persist the entire session in localStorage.
   persist(
     (set) => ({
       session: {

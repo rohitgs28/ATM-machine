@@ -4,7 +4,7 @@ import PinEntry from '@features/pin/PinEntry';
 
 const PinPage: React.FC = () => {
   // Invoke the card guard to perform a redirect if necessary.  The
-  // return value indicates whether a card is present; 
+  // return value indicates whether a card is present;
   const hasCard = useCardIdentityGuard();
   if (!hasCard) {
     return null;

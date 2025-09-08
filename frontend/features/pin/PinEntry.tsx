@@ -20,7 +20,6 @@ const PinEntry: React.FC = () => {
   const toast = useToast();
   const pinInputRef = useRef<HTMLInputElement | null>(null);
 
-  // typed mutation result from your hook
   const pinLogin: UseMutationResult<PinLoginResponse, HttpError, PinLoginArgs> = usePinLogin(
     (data: PinLoginResponse) => {
       // on success: set session, show toast, navigate to menu
@@ -63,7 +62,6 @@ const PinEntry: React.FC = () => {
     [pinLogin, buildRequestBody],
   );
 
- 
   usePinKeyboard(pin, setPin, pinInputRef, onEnter);
 
   // form submit handler with validation

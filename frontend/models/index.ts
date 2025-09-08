@@ -1,4 +1,3 @@
-
 export interface Session {
   isAuthenticated: boolean;
   customerName?: string;

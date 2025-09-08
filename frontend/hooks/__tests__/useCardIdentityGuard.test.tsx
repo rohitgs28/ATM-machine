@@ -8,7 +8,7 @@ jest.mock('next/router', () => ({
 
 jest.mock('../useMounted', () => ({
   __esModule: true,
-  default: () => true, 
+  default: () => true,
 }));
 
 jest.mock('../useSessionStore', () => ({
@@ -26,8 +26,8 @@ describe('useCardIdentityGuard', () => {
   });
 
   it('redirects to /card when no token present', () => {
-    (useSessionStore as unknown as jest.Mock).mockImplementation(
-      (selector: any) => selector({ session: { cardToken: null } }),
+    (useSessionStore as unknown as jest.Mock).mockImplementation((selector: any) =>
+      selector({ session: { cardToken: null } }),
     );
 
     const { result } = renderHook(() => useCardIdentityGuard());
@@ -36,13 +36,12 @@ describe('useCardIdentityGuard', () => {
   });
 
   it('returns true and does not redirect when token is present', () => {
-    (useSessionStore as unknown as jest.Mock).mockImplementation(
-      (selector: any) => selector({ session: { cardToken: 'tok123' } }),
+    (useSessionStore as unknown as jest.Mock).mockImplementation((selector: any) =>
+      selector({ session: { cardToken: 'tok123' } }),
     );
 
     const { result } = renderHook(() => useCardIdentityGuard());
     expect(result.current).toBe(true);
     expect(replaceMock).not.toHaveBeenCalled();
   });
-
 });

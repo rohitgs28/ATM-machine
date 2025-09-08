@@ -3,7 +3,7 @@ import { api } from '@api/client';
 import type { HttpError } from '@utils/errors';
 
 /**
- * Provides a mutation for logging out the current session.  
+ * Provides a mutation for logging out the current session.
  *
  * @param onSuccess callback fired after a successful logout
  * @param onError callback fired when the logout fails

@@ -3,7 +3,6 @@ import { api } from '@api/client';
 import type { HttpError } from '@utils/errors';
 import type { PinLoginResponse } from '@models/index';
 
-
 export interface PinLoginArgs {
   pin: string;
   cardToken?: string | null;

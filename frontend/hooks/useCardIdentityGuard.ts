@@ -11,7 +11,6 @@ export function useCardIdentityGuard(): boolean {
   const router = useRouter();
   const mounted = useMounted();
 
-  // Only consider cardToken now (BIN/last4 are ignored for access checks)
   const { cardToken = null } = useSessionStore((s) => s.session ?? { cardToken: null });
 
   const hasCard = Boolean(cardToken);

@@ -37,10 +37,9 @@ export async function api<T>(path: string, init: RequestInit = {}): Promise<T> {
         userMessage = parsed.detail;
       }
       raw = JSON.stringify(parsed);
-    } catch {
-    }
+    } catch {}
 
-    // Construct an HttpError augmented with a userMessage.  
+    // Construct an HttpError augmented with a userMessage.
     const err: HttpError & { userMessage?: string } = new HttpError(resp.status, raw);
     err.userMessage = userMessage;
     throw err;

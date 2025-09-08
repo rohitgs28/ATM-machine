@@ -35,7 +35,7 @@ describe('Menu', () => {
     (useLogout as unknown as jest.Mock).mockReturnValue({ mutate, isLoading: false });
 
     const clearSession = jest.fn();
-    // Zustand selector-friendly mock: selector(store) => slice
+    // Zustand selector-friendly mock
     (useSessionStore as unknown as jest.Mock).mockImplementation((selector: (s: any) => any) =>
       selector({
         session: { customerName: 'Test', cardNetwork: 'visa' },

@@ -21,8 +21,7 @@ const ATMLayout: React.FC<ATMLayoutProps> = ({
   leftButtonHandlers,
   rightButtonHandlers,
 }) => {
-
-   // vertical positions for the larger side buttons
+  // vertical positions for the larger side buttons
   const BIG_TOPS = [220, 250, 280, 310];
   // vertical positions for the small slat/line indicators
   const LINE_TOPS = [230, 260, 290, 320];
@@ -35,7 +34,7 @@ const ATMLayout: React.FC<ATMLayoutProps> = ({
   const RADIUS = '5px';
 
   return (
-    <Flex minH="100vh" align="center" justify="center" bg="atm.purple" pt={180} >
+    <Flex minH="100vh" align="center" justify="center" bg="atm.purple" pt={180}>
       <Box
         position="relative"
         w={['320px', '360px']}

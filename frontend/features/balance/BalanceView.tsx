@@ -9,14 +9,13 @@ import { useSessionStore } from '@hooks/useSessionStore';
 import type { BalanceResponse } from '@models/index';
 
 /**
- * BalanceView feature component.  Displays the authenticated user's current account balance.  
+ * BalanceView feature component.  Displays the authenticated user's current account balance.
  */
 const BalanceView: React.FC = () => {
   const router = useRouter();
   const toast = useToast();
   const { cardNetwork } = useSessionStore((s) => s.session);
 
- 
   const { data, isLoading, isError, error, refetch } = useQuery<BalanceResponse, HttpError>({
     queryKey: ['balance'],
     queryFn: async () => api<BalanceResponse>('/account/balance'),
