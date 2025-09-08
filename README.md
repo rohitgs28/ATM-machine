@@ -58,7 +58,7 @@ CREATE DATABASE db_atm OWNER atm;
 ---
 
 ## Backend Setup (FastAPI)
-In the backend folder make sure the shared .env file is present. Makes ure the db port no is correct as DATABASE_URL=postgresql+psycopg2://atm:atm@localhost:5432/db_atm
+In the backend folder make sure the shared .env file is present. Make sure the db port no is correct as DATABASE_URL=postgresql+psycopg2://atm:atm@localhost:5432/db_atm
 
 Create a virtual environment and install dependencies:
 
