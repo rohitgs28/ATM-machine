@@ -73,7 +73,7 @@ class Card(Base):
     customer_id: Mapped[int] = mapped_column(
         ForeignKey("tbl_customers.id", ondelete="CASCADE"), index=True
     )
-    token: Mapped[Optional[str]] = mapped_column(String, unique=True)
+    token: Mapped[str] = mapped_column(String, unique=True)
     bin: Mapped[str] = mapped_column(String(12), nullable=False)
     last4: Mapped[str] = mapped_column(String(4), nullable=False)
     network: Mapped[str] = mapped_column(String(20), nullable=False)
