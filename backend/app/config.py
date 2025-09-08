@@ -1,9 +1,9 @@
-# Application configuration using Pydantic.
 
 from functools import lru_cache
 from pydantic import Field
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
+# Application configuration using Pydantic.
 
 class Settings(BaseSettings):
     app_env: str = Field(default="dev", alias="APP_ENV")
@@ -13,7 +13,7 @@ class Settings(BaseSettings):
     rate_limit_window_sec: int = Field(default=900, alias="RATE_LIMIT_WINDOW_SEC")
     rate_limit_max_attempts: int = Field(default=5, alias="RATE_LIMIT_MAX_ATTEMPTS")
 
-    # Pydantic v2 config
+    # Pydantic config
     model_config = SettingsConfigDict(
         env_file=".env",
         env_file_encoding="utf-8",
